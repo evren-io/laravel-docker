@@ -1,0 +1,5 @@
+application:
+  build: .
+  environment:
+    ENV_VARIABLE_SOMETHING: root
+    APPLICATION_LIVE: 1

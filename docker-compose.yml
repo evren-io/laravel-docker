@@ -1,0 +1,135 @@
+sources:
+  build: images/sources
+  volumes:
+    - ./apiapp:/var/www/html/apiapp
+
+rabbitmq:
+  image: rabbitmq:3-management
+  environment:
+    RABBITMQ_DEFAULT_USER: paulaan
+    RABBITMQ_DEFAULT_PASS: "@86"
+  ports:
+    - "15672:15672"
+
+database:
+  build: images/sources
+
+php:
+  extends:
+    file: php-compose.yml
+    service: application
+  volumes_from:
+      - sources
+  entrypoint: "/run.sh"
+  links:
+    - rabbitmq
+    - cache
+    - redis
+    - mysql
+    - elasticsearch
+  environment:
+    APPLICATION_LIVE: 0
+    ENV_VARIABLE: 123512341325987
+phpslaver:
+  extends:
+    file: php-compose.yml
+    service: application
+  volumes_from:
+      - sources
+  entrypoint: "/slaver.sh"
+  links:
+    - rabbitmq
+    - mongo
+    - cache
+    - redis
+    - mysql
+    - elasticsearch
+  environment:
+    APPLICATION_LIVE: 0
+
+cron:
+  extends:
+    file: php-compose.yml
+    service: application
+  volumes_from:
+      - sources
+  working_dir: /var/www/html/apiapp
+  entrypoint: "/cron.sh"
+  links:
+    - rabbitmq
+    - cache
+    - redis
+    - mysql
+    - elasticsearch
+    - nginx
+#    - behat
+  environment:
+    XDEBUG_CONFIG: remote_host=192.168.99.100
+    APPLICATION_LIVE: 0
+
+cache:
+  image: memcached
+  ports:
+    - "11211:11211"
+    - "9030:9000"
+
+redis:
+  image: redis
+  ports:
+    - "6379:6379"
+
+elasticsearch:
+  image: elasticsearch:latest
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+# logstash:
+#   image: logstash:latest
+#   command: logstash -f /etc/logstash/conf.d/logstash.conf
+#   volumes:
+#     - ./images/logstash/config:/etc/logstash/conf.d
+#   ports:
+#     - "5000:5000"
+#   links:
+#     - elasticsearch
+# kibana:
+#   build: images/kibana
+#   volumes:
+#     - ./images/kibana/config/:/opt/kibana/config/
+#   ports:
+#     - "5601:5601"
+#   links:
+#     - elasticsearch
+
+mysql:
+  build: images/percona
+  hostname: db_master
+  ports:
+      - "3308:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: db_pass
+    MYSQL_DATABASE: db_nme
+    MYSQL_USER: db_user
+    MYSQL_PASSWORD: db_pass
+
+nginx:
+  build: images/nginx
+  volumes_from:
+    - sources
+    - phpslaver
+    - php
+  command: nginx -g "daemon off;"
+  links:
+    - phpslaver
+    - php
+    - sources
+#    - trainer
+  ports:
+    - "80:88"
+    - "443:443"
+
+#
+#behat:
+#  image: selenium/standalone-chrome
+#  links:
+#    - nginx
