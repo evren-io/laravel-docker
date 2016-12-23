@@ -1,7 +1,7 @@
 sources:
   build: images/sources
   volumes:
-    - ./apiapp:/var/www/html/apiapp
+    - .:/var/www/html/apiapps
 
 rabbitmq:
   image: rabbitmq:3-management
@@ -39,7 +39,6 @@ phpslaver:
   entrypoint: "/slaver.sh"
   links:
     - rabbitmq
-    - mongo
     - cache
     - redis
     - mysql
@@ -53,7 +52,7 @@ cron:
     service: application
   volumes_from:
       - sources
-  working_dir: /var/www/html/apiapp
+  working_dir: /var/www/html/apiapps
   entrypoint: "/cron.sh"
   links:
     - rabbitmq

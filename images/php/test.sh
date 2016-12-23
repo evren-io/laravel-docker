@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
-rm -rf ../saloneses-dev
-mkdir ../saloneses-dev
-cp -R app/ ../saloneses-dev/
-cp -R sr/ ../saloneses-dev/
-mkdir ../saloneses-dev/web
-cp web/*.php ../saloneses-dev/web/
-cp -R web/ ../saloneses-dev/
-cp -R core_test ../saloneses-dev/
-cp -R feature ../saloneses-dev/
-cp -R bin ../saloneses-dev/
-cp cache.sh ../saloneses-dev/
-cp composer* ../saloneses-dev/
+rm -rf ../apiapps-dev
+mkdir ../apiapps-dev
+cp -R app/ ../apiapps-dev/
+cp -R sr/ ../apiapps-dev/
+mkdir ../apiapps-dev/web
+cp web/*.php ../apiapps-dev/web/
+cp -R web/ ../apiapps-dev/
+cp -R core_test ../apiapps-dev/
+cp -R feature ../apiapps-dev/
+cp -R bin ../apiapps-dev/
+cp cache.sh ../apiapps-dev/
+cp composer* ../apiapps-dev/
 
-cd ../saloneses-dev
+cd ../apiapps-dev
 composer install
 app/console doctrine:cache:clear-query
 app/console doctrine:cache:clear-metadata

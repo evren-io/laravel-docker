@@ -30,13 +30,6 @@ ADD images/php/ext-apc.ini /usr/local/etc/php/conf.d/
 
 RUN docker-php-ext-install sockets
 
-####### SETUP ENVIRONMENT ####
-RUN mkdir /var/saloneses
-RUN mkdir /var/saloneses/cache
-RUN mkdir /var/saloneses/logs
-RUN chown -R www-data /var/saloneses
-###### ENVIRONMENT ###########
-
 #################### <<<SUPERVISORD ####################
 
 #################### <<<xhgui ####################
@@ -62,7 +55,7 @@ RUN mkdir /consumers
 RUN mkdir /consumers/template
 RUN touch /consumers/consumers.ini
 
-WORKDIR /var/www/html/saloneses
+WORKDIR /var/www/html/apiapps
 RUN apt-get update -y && apt-get install -y libssh2-1-dev libssh2-1 unzip wget
 RUN git clone https://github.com/php/pecl-networking-ssh2.git && \
         cd pecl-networking-ssh2 && \
@@ -108,7 +101,7 @@ ENV PHP_IDE_CONFIG serverName=dev.salones.es
 
 #################### <<<composer ###################
 COPY images/php/auth.json /root/.composer/
-ADD saloneses/composer.phar /usr/local/bin/composer
+ADD composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
 RUN composer global require hirak/prestissimo
 #################### >>>composer ###################
@@ -141,5 +134,5 @@ RUN php -f /consumers/consumer.init.php
 ###### END CRON ########
 COPY images/php/ext-newrelic.ini /usr/local/etc/php/conf.d/newrelic.ini
 RUN docker-php-ext-install opcache
-ENV GIT_DIR=/var/www/html/saloneses
+ENV GIT_DIR=/var/www/html/apiapps
 EXPOSE 9000
