@@ -11,6 +11,13 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->get(
+    '/home',
+    'Controller@home'
+);
+$app->get(
+    '/',
+    function () use ($app) {
+        return $app->version();
+    }
+);
