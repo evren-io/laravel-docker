@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "69879e406a43af317353b191656aafd5",
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "hash": "5848676684b3b2693aa356e9a6801264",
+    "content-hash": "9a41bc7ead69d76d7e7d8407c302800f",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -683,24 +683,24 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.0.3",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "5b8182cc0abb4b0ff290ba9df6c0e1323286013a"
+                "reference": "4dd659edadffdc2143e4753df655d866dbfeedf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/5b8182cc0abb4b0ff290ba9df6c0e1323286013a",
-                "reference": "5b8182cc0abb4b0ff290ba9df6c0e1323286013a",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4dd659edadffdc2143e4753df655d866dbfeedf0",
+                "reference": "4dd659edadffdc2143e4753df655d866dbfeedf0",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "php": ">=5.5"
+                "php": ">=5.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0|~5.0"
+                "phpunit/phpunit": "~4.0"
             },
             "bin": [
                 "bin/php-parse"
@@ -708,7 +708,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -730,7 +730,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-02-03 21:57:31"
+            "time": "2016-09-16 12:04:44"
         },
         {
             "name": "paragonie/random_compat",
@@ -1965,6 +1965,97 @@
             "time": "2016-04-29 12:21:54"
         },
         {
+            "name": "gossi/docblock",
+            "version": "v1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gossi/docblock.git",
+                "reference": "9360d6c57c4d8655c59e77a50abdc5b43c3ca521"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gossi/docblock/zipball/9360d6c57c4d8655c59e77a50abdc5b43c3ca521",
+                "reference": "9360d6c57c4d8655c59e77a50abdc5b43c3ca521",
+                "shasum": ""
+            },
+            "require": {
+                "phootwork/collection": "~1",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4",
+                "sami/sami": "~1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "gossi\\docblock\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP Docblock parser and generator. An API to read and write Docblocks.",
+            "keywords": [
+                "docblock",
+                "generator",
+                "parser"
+            ],
+            "time": "2015-09-18 14:16:44"
+        },
+        {
+            "name": "gossi/php-code-generator",
+            "version": "v0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gossi/php-code-generator.git",
+                "reference": "841e8103ae71ccca11424733ceeb64f9f5e34dae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gossi/php-code-generator/zipball/841e8103ae71ccca11424733ceeb64f9f5e34dae",
+                "reference": "841e8103ae71ccca11424733ceeb64f9f5e34dae",
+                "shasum": ""
+            },
+            "require": {
+                "gossi/docblock": "~1",
+                "nikic/php-parser": "~1|~2",
+                "phootwork/file": "~0",
+                "phootwork/tokenizer": "~0",
+                "php": ">=5.4",
+                "symfony/options-resolver": "~2|~3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4",
+                "sami/sami": "~3"
+            },
+            "suggest": {
+                "gossi/php-code-formatter": "Formatting your generated code"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "gossi\\codegen\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache2"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Gossmann",
+                    "homepage": "http://gos.si"
+                }
+            ],
+            "description": "Toolset for generating PHP code",
+            "keywords": [
+                "code generation"
+            ],
+            "time": "2016-11-16 18:25:58"
+        },
+        {
             "name": "hamcrest/hamcrest-php",
             "version": "v1.2.2",
             "source": {
@@ -2115,6 +2206,163 @@
                 "object graph"
             ],
             "time": "2017-01-26 22:05:40"
+        },
+        {
+            "name": "phootwork/collection",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phootwork/collection.git",
+                "reference": "fd231ffb10bcc63679c8e9d41a2b6d246d1fe3f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phootwork/collection/zipball/fd231ffb10bcc63679c8e9d41a2b6d246d1fe3f0",
+                "reference": "fd231ffb10bcc63679c8e9d41a2b6d246d1fe3f0",
+                "shasum": ""
+            },
+            "require": {
+                "phootwork/lang": "~0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4",
+                "sami/sami": "~3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phootwork\\collection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP Collections library (List, Set, Map, Queue & Stack)",
+            "keywords": [
+                "collection",
+                "collections",
+                "list",
+                "map",
+                "queue",
+                "set",
+                "stack"
+            ],
+            "time": "2016-11-16 14:03:57"
+        },
+        {
+            "name": "phootwork/file",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phootwork/file.git",
+                "reference": "98385567469a36cd37ae24e0d7f173e2c0787bec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phootwork/file/zipball/98385567469a36cd37ae24e0d7f173e2c0787bec",
+                "reference": "98385567469a36cd37ae24e0d7f173e2c0787bec",
+                "shasum": ""
+            },
+            "require": {
+                "phootwork/lang": "~0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1",
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phootwork\\file\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "File Operations for the local Filesystem",
+            "keywords": [
+                "file",
+                "filesystem"
+            ],
+            "time": "2016-04-21 15:06:11"
+        },
+        {
+            "name": "phootwork/lang",
+            "version": "v0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phootwork/lang.git",
+                "reference": "7410bbc56bb98cd47dcded81b7dfbfd3be311782"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phootwork/lang/zipball/7410bbc56bb98cd47dcded81b7dfbfd3be311782",
+                "reference": "7410bbc56bb98cd47dcded81b7dfbfd3be311782",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phootwork\\lang\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "(Missing) PHP features represented by objects",
+            "time": "2015-06-23 13:11:40"
+        },
+        {
+            "name": "phootwork/tokenizer",
+            "version": "v0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phootwork/tokenizer.git",
+                "reference": "6eabc110532fea70986d9e3f8a2cdc5e2406cda7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phootwork/tokenizer/zipball/6eabc110532fea70986d9e3f8a2cdc5e2406cda7",
+                "reference": "6eabc110532fea70986d9e3f8a2cdc5e2406cda7",
+                "shasum": ""
+            },
+            "require": {
+                "phootwork/collection": "~1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phootwork\\tokenizer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "gossi"
+                }
+            ],
+            "description": "Tokenizer for PHP code",
+            "keywords": [
+                "tokenizer"
+            ],
+            "time": "2015-05-12 16:11:09"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -3224,6 +3472,109 @@
             "time": "2016-10-03 07:35:21"
         },
         {
+            "name": "symfony/filesystem",
+            "version": "v3.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "0565b61bf098cb4dc09f4f103f033138ae4f42c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/0565b61bf098cb4dc09f4f103f033138ae4f42c6",
+                "reference": "0565b61bf098cb4dc09f4f103f033138ae4f42c6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-10-18 04:30:12"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "855429e3e9014b9dafee2a667de304c3aaa86fe6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/855429e3e9014b9dafee2a667de304c3aaa86fe6",
+                "reference": "855429e3e9014b9dafee2a667de304c3aaa86fe6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony OptionsResolver Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "time": "2017-01-02 20:32:22"
+        },
+        {
             "name": "symfony/yaml",
             "version": "v3.2.2",
             "source": {
@@ -3327,11 +3678,67 @@
                 "validate"
             ],
             "time": "2016-11-23 20:04:58"
+        },
+        {
+            "name": "weburnit/swagger-generator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weburnit/swagger-generator.git",
+                "reference": "fcb4256891e3ce4874c1a5715f8085cea6a26f4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weburnit/swagger-generator/zipball/fcb4256891e3ce4874c1a5715f8085cea6a26f4e",
+                "reference": "fcb4256891e3ce4874c1a5715f8085cea6a26f4e",
+                "shasum": ""
+            },
+            "require": {
+                "gossi/php-code-generator": "^0.4.1",
+                "illuminate/console": "^5.4",
+                "php": "~7.0",
+                "symfony/filesystem": "v3.1.6",
+                "symfony/finder": "v3.2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Weburnit\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\Weburnit\\": "tests/"
+                },
+                "classmap": [
+                    "tests/"
+                ]
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Aan",
+                    "email": "aan@saloniz.com",
+                    "role": "Developer"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/weburnit/swagger-generator/tree/master",
+                "issues": "https://github.com/weburnit/swagger-generator/issues"
+            },
+            "time": "2017-02-04 11:44:38"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "weburnit/swagger-generator": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
