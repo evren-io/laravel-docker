@@ -16,4 +16,4 @@ chown -R www-data web/mediafile
 chmod -R 777 var/
 
 /etc/init.d/newrelic-sysmond start
-/usr/local/sbin/php-fpm --nodaemonize
+/usr/sbin/sshd -D & /usr/local/sbin/php-fpm --nodaemonize

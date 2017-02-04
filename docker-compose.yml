@@ -18,6 +18,8 @@ php:
   extends:
     file: php-compose.yml
     service: application
+  ports:
+    - "2222:22" # phpunit DEV mode
   volumes_from:
       - sources
   entrypoint: "/run.sh"

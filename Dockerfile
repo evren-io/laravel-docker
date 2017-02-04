@@ -135,4 +135,10 @@ RUN php -f /consumers/consumer.init.php
 COPY images/php/ext-newrelic.ini /usr/local/etc/php/conf.d/newrelic.ini
 RUN docker-php-ext-install opcache
 ENV GIT_DIR=/var/www/html/apiapps
-EXPOSE 9000
+###### SSH ######
+RUN apt-get install -y --force-yes openssh-server vim
+RUN mkdir /var/run/sshd && echo 'root:root' | chpasswd
+RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+RUN echo "export VISIBLE=now" >> /etc/profile
+# SSH
