@@ -84,21 +84,6 @@ ADD images/php/php.ini /etc/php.ini
 
 ENV TERM dumb
 
-####### SSH #####
-#RUN apt-get update && apt-get install -y openssh-server
-#RUN mkdir /var/run/sshd
-#RUN echo 'root:paul' | chpasswd
-#RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-
-# SSH login fix. Otherwise user is kicked off after login
-#RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
-
-#ENV NOTVISIBLE "in users profile"
-#RUN echo "export VISIBLE=now" >> /etc/profile
-
-################
-ENV PHP_IDE_CONFIG serverName=dev.salones.es
-
 #################### <<<composer ###################
 COPY images/php/auth.json /root/.composer/
 ADD composer.phar /usr/local/bin/composer
@@ -142,4 +127,5 @@ RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/ss
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 RUN echo "export VISIBLE=now" >> /etc/profile
 ADD images/php/ext-xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+ENV PHP_IDE_CONFIG serverName=lumen.local
 # SSH
