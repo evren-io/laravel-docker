@@ -13,4 +13,4 @@ while (false !== ($entry = $dir->read())) {
     }
 }
 $dir->close();
-require_once __DIR__.'/../bootstrap/app.php';
+require_once __DIR__.'/bootstrap.php';

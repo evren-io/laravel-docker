@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Dingo\Api\Routing\Router;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +12,14 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+$api = app(Router::class);
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+$api->version(
+    'v1',
+    function ($api) {
+        /**
+         * @var $api Router
+         */
+        $api->get('channels', \App\Http\Controllers\ChannelController::class.'@channels');
+    }
+);

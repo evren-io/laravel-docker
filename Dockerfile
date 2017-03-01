@@ -71,13 +71,8 @@ ADD images/php/ext-ssh2.ini /usr/local/etc/php/conf.d/ssh2.ini
 
 RUN docker-php-ext-install exif
 #################### >>>assetic ###################
-RUN apt-get install -y npm
-RUN npm install -g bower
-RUN npm install -g grunt
-RUN npm install -g gulp
-RUN npm install -g uglifyjs
-RUN npm install -g uglifycss
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN apt-get install -y nodejs
 #################### >>>assetic ###################
 
 ADD images/php/php.ini /etc/php.ini
@@ -88,7 +83,6 @@ ENV TERM dumb
 COPY images/php/auth.json /root/.composer/
 ADD composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
-RUN composer global require hirak/prestissimo
 #################### >>>composer ###################
 ADD images/php/run.sh /run.sh
 RUN chmod +x /run.sh
@@ -127,5 +121,5 @@ RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/ss
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 RUN echo "export VISIBLE=now" >> /etc/profile
 ADD images/php/ext-xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
-ENV PHP_IDE_CONFIG serverName=lumen.local
+ENV PHP_IDE_CONFIG serverName=laravel.local
 # SSH

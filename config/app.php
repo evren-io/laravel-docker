@@ -103,7 +103,7 @@ return [
     |
     */
 
-    'key' => 'base64:mcFa8rHp2/yxCKYZITR7qzpZ0TTxbrq6oV0/5l9jW3Q=',
+    'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -136,6 +136,7 @@ return [
     */
 
     'providers' => [
+        Dingo\Api\Provider\LaravelServiceProvider::class,
 
         /*
          * Laravel Framework Service Providers...

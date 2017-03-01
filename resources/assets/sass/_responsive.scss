@@ -1,0 +1,427 @@
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+  h1.mainTitle {
+    font-size: 18px;
+  }
+  .dropdownSec {
+    float: left;
+    width: 47%;
+    min-height: 50px;
+  }
+  .trending-top-sec {
+    display: none;
+  }
+  .mobileSelectWrap {
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    color: #555555;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+  .collapsible {
+    box-shadow: 0 0 0 0;
+    border-top: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+  }
+  .collapsible-header {
+    display: block;
+    cursor: pointer;
+    min-height: 43px;
+    line-height: 0rem;
+    padding: 0rem;
+    background-color: #fff;
+    border-bottom:0px solid #ddd;
+  }
+  .collapsible-body {
+    background: #ddd;
+    height: auto;
+  }
+  .mobileSelectDropDown .dropdown {
+    background: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .mobile-dropdown-menu li {
+    margin: 0px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0 5px 0;
+    text-align: left;
+  }
+  .collapsible-header{
+    border-bottom: 0px;
+  }
+  .mobile-dropdown-menu.active{
+    max-width: 100% !important;
+    width: 100% !important;
+    left: 0 !important;
+    z-index: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+    max-height: none !important;
+    box-shadow: none !important;
+  }
+  .rightSectionTopTrending.mobile li{
+    display: inline-block;
+    padding: 5px 10px;
+  }
+  .gridChannelWrap ul li {
+    width: 48.5%;
+    float: left;
+    margin-bttom: 10px;
+    margin-right: 1.5%;
+    border: 1px solid #e5e5e5;
+  }
+  ul.rightSectionTopTrending.mobile li .icon {
+    font-size: 30px;
+    color: #e3e3e3;
+  }
+  ul.rightSectionTopTrending li.active .icon {
+    color: #eb4e00
+  }
+  .channelEpisodeSection {
+    display: none;
+  }
+  .listChannelWrap .list-logo-section{
+    width: 25%;
+    padding-right: 10px;
+  }
+  .list-title-section {
+    width: 70%;
+    margin-left: 0px;
+    border-left: 1px solid #e5e5e5;
+    padding-left: 9px;
+    margin-top: 10px;
+    padding-right: 10px;
+  }
+  .mobile-display-none {
+    display: none;
+  }
+  .list-title-section li:first-child {
+    color: #999999;
+    padding-left: 0;
+  }
+  .list-title-section li{
+    color: #999999;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 14.5px;
+  }
+  h1.mainTitle {
+    font-size: 18px;
+  }
+  .dropdownSec {
+    float: left;
+    width: 47%;
+    min-height: 50px;
+  }
+  .mobile-dropdow {
+    display: none;
+  }
+  .trending-top-sec {
+    display: block;
+  }
+  .dropdownSec {
+    float: left;
+    margin-right: 3px;
+  }
+  .rightSectionTopTrending {
+    float: right;
+    margin-top: -10px;
+  }
+  ul.rightSectionTopTrending li {
+    float: left;
+    padding: 5px 7px;
+    margin-left: 5px;
+    padding-left: 9px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+  }
+  .gridChannelWrap ul li {
+    width: 31.5%;
+    float: left;
+    margin-bttom: 10px;
+    margin-right: 1.5%;
+    border: 1px solid #e5e5e5;
+  }
+  ul.rightSectionTopTrending li .icon {
+    font-size: 16px;
+    color: #e3e3e3;
+  }
+  ul.rightSectionTopTrending li.active .icon {
+    color: #eb4e00
+  }
+  .channelRightSec li {
+    padding: 7px 15px;
+    border: 1px solid #e5e5e5;
+    margin: 0 5px 15px 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+  }
+  .listChannelWrap .list-logo-section{
+    width: 25%;
+    padding-right: 10px;
+  }
+  .list-title-section {
+    width: 70%;
+    margin-left: 0px;
+    border-left: 1px solid #e5e5e5;
+    padding-left: 9px;
+    margin-top: 10px;
+    padding-right: 10px;
+  }
+  .mobile-display-none {
+    display: none;
+  }
+  .list-title-section li:first-child {
+    color: #999999;
+    padding-left: 0;
+  }
+  .list-title-section li{
+    color: #999999;
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 14.5px;
+  }
+  .dropdownSec {
+    float: left;
+    width: 47%;
+    min-height: 50px;
+  }
+  .mobile-dropdow {
+    display: none;
+  }
+  .trending-top-sec {
+    display: block;
+  }
+  .dropdownSec {
+    float: left;
+    margin-right: 10px;
+  }
+  .rightSectionTopTrending {
+    float: right;
+    margin-top: -10px;
+  }
+  ul.rightSectionTopTrending li {
+    float: left;
+    padding: 5px 7px;
+    margin-left: 5px;
+    padding-left: 9px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+  }
+  .trending-top-sec .dropdown-menu{
+    top: 200px !important;
+  }
+  .gridChannelWrap ul li {
+    width: 31.5%;
+    float: left;
+    margin-bttom: 10px;
+    margin-right: 1.5%;
+  }
+  ul.rightSectionTopTrending li .icon {
+    font-size: 18px;
+    color: #e3e3e3;
+  }
+  ul.rightSectionTopTrending li.active .icon {
+    color: #eb4e00
+  }
+  .channelRightSec li {
+    padding: 7px 15px;
+    border: 1px solid #e5e5e5;
+    margin: 0 5px 15px 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+  }
+  .tabs {
+    width: auto;
+  }
+  .channelEpisodeSection {
+    display: block;
+  }
+  .listChannelWrap .list-logo-section{
+    width: 15%;
+    padding-right: 10px;
+  }
+  .list-title-section {
+    width: 40%;
+    margin-left: 0px;
+    border-left: 0px solid #e5e5e5;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  html {
+    font-size: 15px;
+  }
+  h1.mainTitle {
+    font-size: 30px;
+  }
+  .channelContainer {
+    width: 100%;
+    max-width: 1050px;
+  }
+  .dropdownSec {
+    float: left;
+    margin-right: 20px;
+    width: 46%;
+  }
+  .mobile-dropdow {
+    display: none;
+  }
+  .trending-top-sec {
+    display: block;
+  }
+  .dropdownSec {
+    float: left;
+    margin-right: 20px;
+  }
+  .rightSectionTopTrending {
+    float: right;
+    margin-top: -10px;
+  }
+  ul.rightSectionTopTrending li {
+    float: left;
+    padding: 5px 7px;
+    margin-left: 5px;
+    padding-left: 9px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+  }
+  .trending-top-sec .dropdown-menu{
+    top: 200px !important;
+  }
+  ul.rightSectionTopTrending li .icon {
+    font-size: 30px;
+    color: #e3e3e3;
+  }
+  ul.rightSectionTopTrending li.active .icon {
+    color: #eb4e00
+  }
+  .channelRightSec li {
+    padding: 7px 15px;
+    border: 1px solid #e5e5e5;
+    margin: 0 5px 15px 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+  }
+  .channelEpisodeSection {
+    display: block;
+  }
+  .listChannelWrap .list-logo-section{
+    width: 15%;
+    padding-right: 10px;
+  }
+  .list-title-section {
+    width: 40%;
+    margin-left: 0px;
+    border-left: 0px solid #e5e5e5;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+  h1.mainTitle {
+    font-size: 30px;
+  }
+  .dropdownSec {
+    float: left;
+    margin-right: 20px;
+    width: 46%;
+  }
+  .mobile-dropdow {
+    display: none;
+  }
+  .trending-top-sec {
+    display: block;
+  }
+  .dropdownSec {
+    float: left;
+    margin-right: 20px;
+  }
+  .rightSectionTopTrending {
+    float: right;
+    margin-top: -10px;
+  }
+  ul.rightSectionTopTrending li {
+    float: left;
+    padding: 5px 7px;
+    margin-left: 5px;
+    padding-left: 9px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+  }
+  .trending-top-sec .dropdown-menu{
+    top: 200px !important;
+  }
+  .wrapperChennel {
+    margin: 15px 0;
+    overflow: hidden;
+  }
+  .gridChannelWrap ul li {
+    border: 1px solid #e5e5e5;
+    width: 24.3%;
+    margin-right: .7%;
+    margin-bottom: 7px;
+    float: left;
+    cursor: pointer;
+    color: #333;
+  }
+  ul.rightSectionTopTrending li .icon {
+    font-size: 30px;
+    color: #e3e3e3;
+  }
+  ul.rightSectionTopTrending li.active .icon {
+    color: #eb4e00
+  }
+  .channelEpisodeSection {
+    display: block;
+  }
+  .listChannelWrap .list-logo-section{
+    width: 15%;
+    padding-right: 10px;
+  }
+  .list-title-section {
+    width: 40%;
+    margin-left: 0px;
+    border-left: 0px solid #e5e5e5;
+  }
+  .nav-wrapper {
+    padding: 0 153px;
+  }
+
+}

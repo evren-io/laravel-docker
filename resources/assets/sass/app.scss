@@ -3,7 +3,338 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
 // Variables
-@import "variables";
+@import "material";
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/roboto/icomoon.eot?64mhsl');
+  src:  url('../fonts/roboto/icomoon.eot?64mhsl#iefix') format('embedded-opentype'),
+  url('../fonts/roboto/icomoon.ttf?64mhsl') format('truetype'),
+  url('../fonts/roboto/icomoon.woff?64mhsl') format('woff'),
+  url('../fonts/roboto/icomoon.svg?64mhsl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-channel-grid:before {
+  content: "\e900";
+}
+.icon-channel-list:before {
+  content: "\e901";
+}
+.icon-dropdown:before {
+  content: "\e902";
+}
+.icon-go-icon:before {
+  content: "\e903";
+}
+.icon-hd-icon:before {
+  content: "\e904";
+}
+.icon-heart-icon:before {
+  content: "\e905";
+}
+.icon-sd-icon:before {
+  content: "\e906";
+}
+
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-bold{
+  font-weight: bold;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+.point-cursor {
+  cursor: pointer;
+}
+a {
+  color: #555555;
+  font-size: 13px;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  width:auto;
+  margin-left: auto;
+}
+h1.mainTitle {
+  color: #eb4e00;
+  font-size: 30px;
+  margin-top: 5px;
+}
+img {
+  max-width: 100%;
+}
+.channelRightSec li {
+  padding: 7px 15px !important;
+  border: 1px solid #e5e5e5;
+  margin: 0 5px 15px 5px !important;
+  cursor: pointer;
+  float: right;
+  height: auto !important;
+  margin-top: 10px !important;
+}
+.channelRightSec li a{
+  padding: 0 !important;
+}
+.trending-top-sec .dropdown-button{
+  color: #555555;
+  border: 1px solid #e5e5e5;
+  padding: 10px 65px;
+}
+.trending-top-sec .dropdown-menu{
+  width: 100%;
+  border-radius: inherit;
+  border: 1px solid #e5e5e5;
+  box-shadow: inherit;
+  top: 39px;
+}
+.trending-top-sec .dropdown-menu li{
+  color: #555555;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 2px 0;
+  margin: 5px 15px;
+  min-height: 30px;
+  width: 88%;
+}
+.trending-top-sec .dropdown-menu li label {
+  font-weight: normal;
+  display: block;
+  cursor: pointer;
+}
+.trending-top-sec .dropdown-menu li label:hover{
+  color: #eb4e00;
+}
+.dropdown-content li:hover {
+  background-color: #ffffff;
+}
+.custom-checkbox {
+  width: 20px;
+  height: 13px;
+  display: inline-block;
+  z-index: 999;
+  top: 3px;
+  background: url('../images/checkbox.png') no-repeat;
+}
+.custom-checkbox.selected {
+  background: url('../images/checkbox-selected.png') no-repeat;
+}
+.trending-top-sec .dropdown-menu li.btn-Section {
+  border: none;
+  margin-top: 10px;
+}
+.btn-apply {
+  border: 1px solid #eb4e00;
+  padding: 5px 10px;
+  border-radius: 0;
+  color: #fff;
+  background: #eb4e00;
+}
+.btn-apply:focus {
+  background-color: #eb4e00;
+}
+.btn-clear {
+  background: #fff;
+  color: #eb4e00;
+  border: 1px solid #eb4e00;
+  padding: 5px 10px;
+  border-radius: 0;
+}
+.btn-clear:focus {
+  background-color:#fff;
+}
+.gridChannelWrap ul li a {
+  color: #333;
+}
+.channel-align {
+  height: 150px;
+  vertical-align: middle;
+  display: table-cell;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 24.3%;
+}
+.img-title {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 30px;
+  padding-top: 15px;
+}
+.img-logo {
+  text-align: center;
+}
+.img-channel-sec {
+  border-top: 1px solid #e5e5e5;
+  clear: both;
+  overflow: hidden;
+}
+.img-chnnel-left {
+  float: left;
+  padding: 4px 10px;
+  font-size: 16px;
+}
+.img-chnnel-right {
+  float: right;
+  border-left: 1px solid #e5e5e5;
+  padding: 4px 10px;
+}
+.img-chnnel-right .icon-heart-icon {
+  font-size: 22px;
+  color: #e3e3e3;
+}
+.icon-heart-icon.active{
+  color: #ff0000 !important;
+}
+ul.rightSectionTopTrending li.active .icon {
+  color: #eb4e00
+}
+.icon-dropdown {
+  color: #e3e3e3;
+}
+.tabs {
+  position: inherit;
+  overflow-x: inherit;
+  overflow-y: inherit;
+  height: auto !important;
+  background-color: inherit;
+  margin: 0 !important;
+  white-space: nowrap;
+  width: auto !important;
+}
+.channelRightSec li .icon {
+  font-size: 20px;
+  color: #e3e3e3;
+}
+.channelRightSec li a.active .icon {
+  font-size: 20px;
+  color: #eb4e00;
+}
+.indicator {
+  right: 0 !important;
+  left: 0 !important;
+  background-color: inherit !important;
+}
+.listChannelWrap ul li.listview {
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.listChannelWrap .list-logo-section:hover{
+  color: #eb4e00;
+}
+.listChannelWrap .list-logo-section {
+  float: left;
+  width: 15%;
+  text-align: center;
+  font-size: 16px;
+  color: #595959;
+}
+.list-title-section {
+  float: left;
+  width: 40%;
+  padding-left: 10px;
+}
+.channel-fav-list {
+  display: flex;
+}
+.channels-fav-list h2 {
+  margin-top: 0;
+  color: #595959;
+  font-size: 22px;
+  float: left;
+  padding-right: 10px;
+}
+.channels-fav-list .icon {
+  color: #e3e3e3;
+  font-size: 20px;
+}
+.date-channel-list {
+  color: #999999;
+  font-size: 14px;
+}
+.list-title-section li:first-child {
+  color: #eb4e00;
+  padding-left: 0;
+}
+.list-title-section li{
+  display: inline-block;
+}
+.list-title-section li+li{
+  border-bottom: 0;
+  border-left: 1px solid #e5e5e5;
+  padding: 0 5px;
+  line-height: 16px;
+  font-style: italic;
+  font-size: 12px;
+}
+.channelEpisodeSection {
+  float: left;
+  width: 40%;
+  border-left: 1px solid #e5e5e5;
+  padding-left: 20px;
+  margin-top: 27px;
+}
+.channelEpisodeSection p {
+  color: #999;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+.channelEpisodeSection p:hover {
+  color: #eb4e00;
+}
+.list-title-section p {
+  color: #999999;
+}
+.side-nav {
+  background-color: #f4511e !important;
+  color: #fff;
+}
+.side-nav li a {
+  color: #fff;
+}
+.channelContainer {
+  margin-top: 10px;
+}
+
+@import "responsive";

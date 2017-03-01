@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
-         bootstrap="bootstrap/autoload.php"
+         bootstrap="tests/bootstrap.php"
          colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
@@ -27,5 +27,11 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="API_STANDARDS_TREE" value="x"/>
+        <env name="API_SUBTYPE" value="prime"/>
+        <env name="API_DOMAIN" value="127.0.0.1"/>
+        <env name="API_VERSION" value="v2"/>
+        <env name="API_PREFIX" value="api"/>
+        <env name="API_DEFAULT_FORMAT" value="json"/>
     </php>
 </phpunit>

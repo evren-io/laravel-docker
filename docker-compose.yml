@@ -62,8 +62,8 @@ cron:
     - redis
     - mysql
     - elasticsearch
-    - nginx
-#    - behat
+    - laravel.local
+    - selenium
   environment:
     XDEBUG_CONFIG: remote_host=192.168.99.100
     APPLICATION_LIVE: 0
@@ -113,7 +113,7 @@ mysql:
     MYSQL_USER: db_user
     MYSQL_PASSWORD: db_pass
 
-nginx:
+laravel.local:
   build: images/nginx
   volumes_from:
     - sources
@@ -125,12 +125,8 @@ nginx:
     - php
     - sources
 #    - trainer
-  ports:
-    - "80:88"
-    - "443:443"
 
-#
-#behat:
-#  image: selenium/standalone-chrome
-#  links:
-#    - nginx
+selenium:
+  image: selenium/standalone-chrome
+  links:
+    - laravel.local
